@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>猫一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>猫種</th>
+      <th>飼い主id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cats.each do |cat| %>
+      <tr>
+        <td><%= cat.name %></td>
+        <td><%= cat.cat_breed %></td>
+        <td><%= cat.user_id %></td>
+        <td><%= link_to '詳細', cat %></td>
+        <td><%= link_to '編集', edit_cat_path(cat) %></td>
+        <td><%= button_to '削除', cat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規登録', new_cat_path %> |
+<%= link_to '飼い主一覧', users_path %>

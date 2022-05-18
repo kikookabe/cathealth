@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>名前:</strong>
+  <%= @cat.name %>
+</p>
+
+<p>
+  <strong>猫種:</strong>
+  <%= @cat.cat_breed %>
+</p>
+
+<p>
+  <strong>飼い主id:</strong>
+  <%= @cat.user_id %>
+</p>
+
+<%= link_to '編集', edit_cat_path(@cat) %> |
+<%= link_to '戻る', cats_path %> |
+<%= link_to 'タイマー', timers_path %>

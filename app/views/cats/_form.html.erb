@@ -1,0 +1,32 @@
+<%= form_with(model: cat, local: true) do |form| %>
+  <% if cat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cat.errors.count, "error") %> prohibited this cat from being saved:</h2>
+
+      <ul>
+        <% cat.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :名前 %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :猫種 %>
+    <%= form.text_field :cat_breed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :飼い主id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

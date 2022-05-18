@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang ="ja">
+<head >
+  <meta charset ="UTF-8">
+  <title>タイマー</title>
+</head>
+<body>
+<h1>タイマー</h1>
+<h2>短毛種20分以上</h2>
+<h2>長毛種10分以上</h2>
+
+<div>
+  <div>
+    <div id="min" style="float: left;font-size: xx-large;font-weight: 900;">00</div>
+    <div style="float: left;font-size: xx-small;font-weight: 900;">分</div>
+    <div id="sec" style="float: left;font-size: xx-large;font-weight: 900;">00</div>
+    <div style="float: left;font-size: xx-small;font-weight: 900;">秒</div>
+    <div id="sec2" style="float: left;font-size: xx-large;font-weight: 900;">000</div>
+  </div>
+
+  <div>　</div>
+  <div>　</div>
+
+  <div>
+    <input type="button" value="+10分" onclick="mp10()" style="width:42px; padding: 0;margin: 0;"><input type="button" value="+1分" onclick="mp01()" style="width:42px; padding: 0;margin: 0;"><input type="button" value="+10秒" onclick="sp10()" style="width:42px; padding: 0;margin: 0;"><input type="button" value="+1秒" onclick="sp01()" style="width:42px; padding: 0;margin: 0;"><br />
+    <input type="button" value="-10分" onclick="mm10()" style="width:42px; padding: 0;margin: 0;"><input type="button" value="-1分" onclick="mm01()" style="width:42px; padding: 0;margin: 0;"><input type="button" value="-10秒" onclick="sm10()" style="width:42px; padding: 0;margin: 0;"><input type="button" value="-1秒" onclick="sm01()" style="width:42px; padding: 0;margin: 0;"><br />
+    <input type="button" value="リセット" onclick="reset()" style="width:56px; padding: 0;margin: 0;"><input type="button" value="スタート" onclick="start()" style="width:56px; padding: 0;margin: 0;"><input type="button" value="ストップ" onclick="stop()" style="width:56px; padding: 0;margin: 0;">
+  </div>
+</div>
+<div>　</div>
+<div>
+  <div style="clear:both;font-size: small;font-weight: 900;">開始時刻</div>
+  <div style="">
+    <div id="sh" style="float: left;font-size: xx-large;font-weight: 900;">00</div>
+    <div style="float: left;font-size: xx-small;font-weight: 900;">時</div>
+    <div id="sm" style="float: left;font-size: xx-large;font-weight: 900;">00</div>
+    <div style="float: left;font-size: xx-small;font-weight: 900;">分</div>
+    <div id="ss" style="float: left;font-size: xx-large;font-weight: 900;">00</div>
+    <div style="float: left;font-size: xx-small;font-weight: 900;">秒</div>
+  </div>
+  <div style="clear:both;font-size: small;font-weight: 900;">現在時刻</div>
+  <div style="">
+    <div id="ch" style="float: left;font-size: xx-large;font-weight: 900;">00</div>
+    <div style="float: left;font-size: xx-small;font-weight: 900;">時</div>
+    <div id="cm" style="float: left;font-size: xx-large;font-weight: 900;">00</div>
+    <div style="float: left;font-size: xx-small;font-weight: 900;">分</div>
+    <div id="cs" style="float: left;font-size: xx-large;font-weight: 900;">00</div>
+    <div style="float: left;font-size: xx-small;font-weight: 900;">秒</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+let timer; //タイマーを格納する変数（タイマーID）の宣言
+const music = new Audio('solemnity1.mp3');
+
+//分と秒をリセット
+function reset() {
+  clearInterval(timer);
+  document.getElementById("min").innerHTML = "00";
+  document.getElementById("sec").innerHTML = "00";
+  document.getElementById("sec2").innerHTML = "000";
+  document.getElementById("sh").innerHTML = "00";
+  document.getElementById("sm").innerHTML = "00";
+  document.getElementById("ss").innerHTML = "00";
+}
+//分にプラス10
+function mp10() {
+  intM = parseInt(document.getElementById("min").innerHTML) + 10;
+  if (intM > 99) intM = 99;
+  document.getElementById("min").innerHTML = intM;
+}
+//分にプラス01
+function mp01() {
+  intM = parseInt(document.getElementById("min").innerHTML) + 1;
+  if (intM < 10) intM = "0" + intM;
+  if (intM > 99) intM = 99;
+  document.getElementById("min").innerHTML = intM;
+}
+//秒にプラス10
+function sp10() {
+  intS = parseInt(document.getElementById("sec").innerHTML) + 10;
+  if (intS > 59) intS = 59;
+  document.getElementById("sec").innerHTML = intS;
+}
+//秒にプラス01
+function sp01() {
+  intS = parseInt(document.getElementById("sec").innerHTML) + 1;
+  if (intS < 10) intS = "0" + intS;
+  if (intS > 59) intS = 59;
+  document.getElementById("sec").innerHTML = intS;
+}
+//分にマイナス10
+function mm10() {
+  intM = parseInt(document.getElementById("min").innerHTML) - 10;
+  if (intM < 0) intM = 0;
+  if (intM < 10) intM = "0" + intM;
+  document.getElementById("min").innerHTML = intM;
+}
+//分にマイナス01
+function mm01() {
+  intM = parseInt(document.getElementById("min").innerHTML) - 1;
+  if (intM < 0) intM = 0;
+  if (intM < 10) intM = "0" + intM;
+  document.getElementById("min").innerHTML = intM;
+}
+//秒にマイナス10
+function sm10() {
+  intS = parseInt(document.getElementById("sec").innerHTML) - 10;
+  if (intS < 0) intS = 0;
+  if (intS < 10) intS = "0" + intS;
+  document.getElementById("sec").innerHTML = intS;
+}
+//秒にマイナス01
+function sm01() {
+  intS = parseInt(document.getElementById("sec").innerHTML) - 1;
+  if (intS < 0) intS = 0;
+  if (intS < 10) intS = "0" + intS;
+  document.getElementById("sec").innerHTML = intS;
+}
+
+//カウントダウン関数を1000ミリ秒毎に呼び出す関数
+function start() {
+  timer=setInterval("countDown()",97);
+  let cdate = new Date();
+  let ch = cdate.getHours();
+  let cm = cdate.getMinutes();
+  let cs = cdate.getSeconds();
+  if (ch<10) ch="0"+ch;
+  if (cm<10) cm="0"+cm;
+  if (cs<10) cs="0"+cs;
+  document.getElementById("sh").innerHTML = ch;
+  document.getElementById("sm").innerHTML = cm;
+  document.getElementById("ss").innerHTML = cs;
+}
+
+//カウントダウン関数
+function countDown() {
+  let intM = parseInt(document.getElementById("min").innerHTML);
+  let intS = parseInt(document.getElementById("sec").innerHTML);
+  let intS2 = parseInt(document.getElementById("sec2").innerHTML);
+      
+  if (intM==0 && intS==0 && intS2==0) {
+    alert("時間を設定してください！");
+    clearInterval(timer);
+  } else {
+    tmWrite((intM*60+intS)*1000+intS2-97);
+  }
+}
+
+//カウントダウン関数を1000ミリ秒毎に呼び出す関数
+setInterval("countDown2()",1000);
+
+//カウントダウン関数
+function countDown2() {
+  let cdate = new Date();
+  let ch = cdate.getHours();
+  let cm = cdate.getMinutes();
+  let cs = cdate.getSeconds();
+  if (ch<10) ch="0"+ch;
+  if (cm<10) cm="0"+cm;
+  if (cs<10) cs="0"+cs;
+  document.getElementById("ch").innerHTML = ch;
+  document.getElementById("cm").innerHTML = cm;
+  document.getElementById("cs").innerHTML = cs;
+}
+
+//残り時間を書き出す関数
+function tmWrite(int) {
+  int=parseInt(int);
+  
+  if (int<=0) {
+    document.getElementById("min").innerHTML = "00";
+    document.getElementById("sec").innerHTML = "00";
+    document.getElementById("sec2").innerHTML = "000";
+    music.play();
+    clearInterval(timer);
+  } else {
+    //残り分数はintを60で割って切り捨てる
+    m=Math.floor(int/60/1000);
+    //残り秒数はintを60で割った余り
+    s=Math.floor((int-m*60000)/1000);
+    //残り秒数2はintを60で割った余り
+    s2=int-m*60000-s*1000;
+    if (m < 10) m = "0" + m;
+    document.getElementById("min").innerHTML=m;
+    if (s < 10) s = "0" + s;
+    document.getElementById("sec").innerHTML=s;
+    if (s2 < 10) s2 = "00" + s2;
+    else if (s2 < 100) s2 = "0" + s2;
+    document.getElementById("sec2").innerHTML=s2;
+  }
+}
+    
+//タイマー停止関数
+function stop() {
+  clearInterval(timer);
+}
+</script>
+</body>
+</html>
+
+<div>　</div>
+<div>　</div>
+<div>　</div>
+
+<%= link_to '戻る', cats_path %>

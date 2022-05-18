@@ -5,8 +5,8 @@
 * Ruby on Rails 6.0系
 
 # 実行手順
-* git clone git@github.com:kikookabe/task_catalog.git
-* cd cat_health
+* git clone git@github.com:kikookabe/cathealth.git
+* cd ~/cathealth
 * bundle install
 * rails db:create && rails db:migrate
 * rails s
