@@ -23,6 +23,8 @@ class CatsController < ApplicationController
   def create
     @cat = Cat.new(cat_params)
 
+    @user = User.new(user_params)
+
     respond_to do |format|
       if @cat.save
         format.html { redirect_to cat_url(@cat), notice: "Cat was successfully created." }
