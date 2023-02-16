@@ -1,1 +1,42 @@
-<mxfile host="app.diagrams.net" modified="2023-02-16T06:55:37.988Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="jhQyubldUoTA-MTqYmYe" version="20.8.20" type="github"><diagram name="ページ1" id="mdwBfj3XyD9eccQEyP6K">7Zjfb9owEMf/Gkvbw6b8IGl4XAJ0WtupKpo29WVyE5O4dWzkmAH963cmNmkaWClVxR6CkLDPZ/vuPl/SK8hPytW5xPPiSmSEIc/JVsgfIc9zHSeCD21Z15bQO6sNuaSZcWoMU/pI7E5jXdCMVC1HJQRTdN42poJzkqqWDUsplm23mWDtW+c4Jx3DNMWsa/1JM1XU1shmoe1fCc0Le7MbDuuVEltnk0lV4Ewsn5j8MfITKYSqR+UqIUwXz9al3jfZs7oNTBKuDtlwe0/GE+fWu7+++nV+8/2iuvhWfTKn/MFsYRJOsMxMwGptq1Atackwh1k8E1xNzYoD87SgLLvEa7HQUVQKpw92FhdC0kfwxwyWXDDAslQGshe2PKZ6pzlTkgp8rm1q7jPTFV61HC9xpWw0gjE8r+jdJj69scQypzwWSonSOGFGcw7jFM4i0uZUR+UOYG6KQqQiq73VdrcMQfxElETJNbiYDX5osBvdu1YGy0ZFrvUpnipoEBr1GuXm27MbuDAwfF/B2uuwpl3SkLHagJLigSSCCajPiIsaPWXsmama45Ty/JLMdPiDxnJjMtImAZWcsY32C5plhGtyQmGF77YymgvK1SbjIIY3FCZxPgcogJgSmLvNHN7aXapEcAgT0w0QAhpYEq2DFk3vUJr7vx1dxAapFx5G1HfeCajfAbqGlz6q7LkezzU4NVe3+1RG4xBB8aIJGgdoCINRT/h4wtGpCQ86gH9URP6m2YfJxcee7PFkof86MdpgJ9q+o3pzRzU4tqEK/oHa3HYD/zpgnkOK2+uil687O0BXmEFBOFYkFgueVR15bfM8XnHhjr6uf4689BwJ/u/ebti3AO8K+PRNnrOD8BBFPvoSofEZikco9nrCxxM+eZMX7QDso8jVXOuBJr0ZDP22BUTg2kEvgjeI4PB+cPBqFcC0+fWu/mPe/Abqj/8C</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-02-16T09:18:46.714Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="tPLpTp15muF6AM_S697D" version="20.8.20" type="github">
+  <diagram name="ページ1" id="mdwBfj3XyD9eccQEyP6K">
+    <mxGraphModel dx="1008" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-1" value="Card" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="360" y="120" width="160" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-2" value="id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="ZjeEF0Z2jPMXGRNKsKJs-1" vertex="1">
+          <mxGeometry y="26" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-3" value="yyyy/mm" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="ZjeEF0Z2jPMXGRNKsKJs-1" vertex="1">
+          <mxGeometry y="56" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-11" value="氏名" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="ZjeEF0Z2jPMXGRNKsKJs-1" vertex="1">
+          <mxGeometry y="86" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-4" value="User_id(FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="ZjeEF0Z2jPMXGRNKsKJs-1" vertex="1">
+          <mxGeometry y="116" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-5" value="User" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="40" y="120" width="160" height="150" as="geometry">
+            <mxRectangle x="80" y="120" width="70" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-6" value="id(FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="ZjeEF0Z2jPMXGRNKsKJs-5" vertex="1">
+          <mxGeometry y="26" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-9" value="氏名" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="ZjeEF0Z2jPMXGRNKsKJs-5" vertex="1">
+          <mxGeometry y="56" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-10" value="部署" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="ZjeEF0Z2jPMXGRNKsKJs-5" vertex="1">
+          <mxGeometry y="86" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjeEF0Z2jPMXGRNKsKJs-8" value="ひとことメモ" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="ZjeEF0Z2jPMXGRNKsKJs-5" vertex="1">
+          <mxGeometry y="116" width="160" height="34" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
